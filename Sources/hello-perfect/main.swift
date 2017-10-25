@@ -1,14 +1,41 @@
+import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 
-// Register your own routes and handlers
+// Create HTTP server.
+let server = HTTPServer()
+
+// Create the container variable for routes to be added to.
 var routes = Routes()
-routes.add(method: .get, uri: "/") {
+
+// Register your own routes and handlers
+// This is an example "Hello, world!" HTML route
+routes.add(method: .get, uri: "/", handler: {
     request, response in
+    // Setting the response content type explicitly to text/html
     response.setHeader(.contentType, value: "text/html")
-    response.appendBody(string: "<html><title>Hello</title><body>Hello, Perfect framework!</body></html>")
-        .completed()
+    // Adding some HTML to the response body object
+    response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, Perfect!</body></html>")
+    // Signalling that the request is completed
+    response.completed()
 }
+)
+
+
+// Adding a route to handle the GET people list URL
+routes.add(method: .get, uri: "/api/v1/people", handler: {
+    request, response in
+    
+    let people = People()
+    
+    // Setting the response content type explicitly to application/json
+    response.setHeader(.contentType, value: "application/json")
+    // Setting the body response to the JSON list generated
+    response.appendBody(string: people.list())
+    // Signalling that the request is completed
+    response.completed()
+}
+)
 
 do {
     // Launch the HTTP server.

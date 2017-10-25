@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB65289B1FA049D100114F15 /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB65289A1FA049D100114F15 /* person.swift */; };
+		EB65289D1FA04A5500114F15 /* people.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB65289C1FA04A5500114F15 /* people.swift */; };
 		OBJ_1005 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Net.swift */; };
 		OBJ_1006 /* NetAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* NetAddress.swift */; };
 		OBJ_1007 /* NetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* NetEvent.swift */; };
@@ -1102,6 +1104,8 @@
 
 /* Begin PBXFileReference section */
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB65289A1FA049D100114F15 /* person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = person.swift; sourceTree = "<group>"; };
+		EB65289C1FA04A5500114F15 /* people.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = people.swift; sourceTree = "<group>"; };
 		OBJ_100 /* a_i2d_fp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_i2d_fp.c; sourceTree = "<group>"; };
 		OBJ_101 /* a_int.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_int.c; sourceTree = "<group>"; };
 		OBJ_102 /* a_mbstr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_mbstr.c; sourceTree = "<group>"; };
@@ -2124,7 +2128,7 @@
 			path = HTTP2;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -2133,7 +2137,6 @@
 				OBJ_11 /* Dependencies */,
 				OBJ_795 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_61 /* PerfectHTTP 3.0.0 */ = {
@@ -2246,7 +2249,9 @@
 		OBJ_8 /* hello-perfect */ = {
 			isa = PBXGroup;
 			children = (
+				EB65289A1FA049D100114F15 /* person.swift */,
 				OBJ_9 /* main.swift */,
+				EB65289C1FA04A5500114F15 /* people.swift */,
 			);
 			name = "hello-perfect";
 			path = "Sources/hello-perfect";
@@ -3298,7 +3303,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_795 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4073,7 +4078,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				EB65289B1FA049D100114F15 /* person.swift in Sources */,
 				OBJ_811 /* Package.swift in Sources */,
+				EB65289D1FA04A5500114F15 /* people.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
